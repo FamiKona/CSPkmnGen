@@ -4,7 +4,7 @@ using CSPkmGen;
 namespace PkmTests
 {
     [TestClass]
-    public class UnitTest1
+    public class Shininess
     {
         [TestMethod]
         public void CanGenerateShiny()
