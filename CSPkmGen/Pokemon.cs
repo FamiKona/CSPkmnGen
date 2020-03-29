@@ -69,5 +69,13 @@ namespace CSPkmGen
                 return val < 8;
             }
         }
+
+        public int getShinyVal(ushort trainerID, ushort secretID)
+        {
+            byte[] perBytes = BitConverter.GetBytes(this.personality);
+            UInt16 upper = (UInt16)(this.personality >> 16);
+            UInt16 lower = (UInt16)(this.personality & 0xFFFF);
+            return (ushort)(trainerID ^ secretID ^ upper ^ lower);
+        }
     }
 }
