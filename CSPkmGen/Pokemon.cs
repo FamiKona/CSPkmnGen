@@ -54,15 +54,20 @@ namespace CSPkmGen
             return fullRange;
         }
 
-        public bool checkShiny(UInt16 trainerID, UInt16 secretID)
+        public bool checkShiny(UInt16 trainerID, UInt16 secretID, bool gen7)
         {
 
             byte[] perBytes = BitConverter.GetBytes(this.personality);
             UInt16 upper = (UInt16)(this.personality >> 16);
             UInt16 lower = (UInt16)(this.personality & 0xFFFF);
             ushort val = (ushort)(trainerID ^ secretID ^ upper ^ lower);
-            return val < 16;
-
+            if (gen7)
+            {
+                return val < 16;
+            } else
+            {
+                return val < 8;
+            }
         }
     }
 }

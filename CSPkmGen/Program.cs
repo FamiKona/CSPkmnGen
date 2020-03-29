@@ -8,11 +8,31 @@ namespace CSPkmGen
 
         private Trainer trainer;
         private int runtime;
+        static bool gen7;
 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello! What is your name?");
             string name = Console.ReadLine();
+            bool gen7InputOK = false;
+            Console.WriteLine("Use the Gen 7 math? (Y/N)");
+            while (!gen7InputOK)
+            {
+                string gen7Input = Console.ReadLine();
+                if (gen7Input.ToUpper().Equals("Y"))
+                {
+                    gen7 = true;
+                    gen7InputOK = true;
+                } else if (gen7Input.ToUpper().Equals("N"))
+                {
+                    gen7 = false;
+                    gen7InputOK = true;
+                } else
+                {
+                    Console.WriteLine("Please input Y or N.");
+                }
+            }
+            
 
             Program p = new Program();
 
@@ -52,7 +72,7 @@ namespace CSPkmGen
             {
                 Pokemon a = new Pokemon(1);
                 catches++;
-                if (a.checkShiny(trainer.getTrainerID(), trainer.getSecretID()))
+                if (a.checkShiny(trainer.getTrainerID(), trainer.getSecretID(), gen7))
                 {
                     gotShiny = true;
                 }
