@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CSPkmGen
 {
-    class Trainer
+    public class Trainer
     {
         Random r = new Random();
 
