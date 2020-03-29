@@ -1,4 +1,4 @@
-generates pokemon in the actually way that the games would (as far as I know)
+generates pokemon in the actual way that the games would (as far as I know)
 
 (mostly) accurate to gen 7
 
