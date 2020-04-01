@@ -3,14 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSPkmGen", "CSPkmGen\CSPkmGen.csproj", "{8113CCED-C141-4954-96F5-9AC6048D626D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsPkmGen", "CSPkmGen\CsPkmGen.csproj", "{8113CCED-C141-4954-96F5-9AC6048D626D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C29279B-EFB8-41AB-9CD3-B6F6D3F5A569}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PkmTests", "PkmTests\PkmTests.csproj", "{6AFBA090-86CF-4737-A767-CE59E01F0762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PkmTests", "PkmTests\PkmTests.csproj", "{6AFBA090-86CF-4737-A767-CE59E01F0762}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
