@@ -74,7 +74,10 @@ namespace CSPkmGen
                 catches++;
                 if (a.checkShiny(trainer.getTrainerID(), trainer.getSecretID(), gen7))
                 {
-                    gotShiny = true;
+                    if (a.capture())
+                    {
+                        gotShiny = true;
+                    }
                 }
             }
 

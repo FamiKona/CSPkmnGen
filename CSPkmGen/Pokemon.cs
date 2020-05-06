@@ -77,5 +77,20 @@ namespace CSPkmGen
             UInt16 lower = (UInt16)(this.personality & 0xFFFF);
             return (ushort)(trainerID ^ secretID ^ upper ^ lower);
         }
+
+        public bool capture()
+        {
+            int hpMax = 200;
+            int hpCurrent = 1;
+            int catchRate = 200;
+            float ballBonus = 1;
+            float statusBonus = 1;
+
+            float a = (((3 * hpMax - 2 * hpCurrent) * catchRate * ballBonus) / (3 * hpMax)) * statusBonus;
+
+            a = Math.Min(a, 255);
+
+            return r.Next(255) < a;
+        }
     }
 }
