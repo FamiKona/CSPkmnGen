@@ -9,6 +9,8 @@ namespace CSPkmGen
         private Trainer trainer;
         private int runtime;
         static bool gen7;
+        static int max = 0;
+        static int min = 100000;
 
         static void Main(string[] args)
         {
@@ -55,7 +57,10 @@ namespace CSPkmGen
 
             double avg = total / al.Count;
 
-            Console.WriteLine("That took an average of {0} attempts, and a total of {1} attempts!", avg, total);
+            Console.WriteLine("======================================");
+
+            Console.WriteLine("That took an average of {0} attempts, and a total of {1} attempts!\n", avg, total);
+            Console.WriteLine("The fastest catch took {0} attempts, and the slowest took {1} attempts!\n", min, max);
         }
 
         void genTrainer(string name)
@@ -79,6 +84,14 @@ namespace CSPkmGen
             }
 
             runtime++;
+            if (catches < min)
+            {
+                min = catches;
+            }
+            if (catches > max)
+            {
+                max = catches;
+            }
             string output = String.Format("{1}) You caught a X after {0} tries!", catches, runtime);
             Console.WriteLine(output);
             return catches;
